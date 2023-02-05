@@ -1,0 +1,58 @@
+h1, h2 {
+    font-family: 'lexend', sans-serif;
+    font-weight: 600;
+    position: relative;
+    text-align: center;
+}
+
+.pageheader {
+    margin-top: 70px;
+}
+
+div {
+    text-align: center;
+}
+
+#download {
+    display: block;
+}
+#download {
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: linear-gradient(329deg, var(--fruity), var(--creamy));
+    color: var(--space);
+    z-index: 1;
+    margin: 30px;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.hidden {
+    display: none !important;
+}
+
+
+:root {
+    --fruity: #d5a5b6;
+    --creamy: #ead2d8;
+    --space: #4b1128;
+}
+
+body {
+    float: center;
+    position: absolute;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    font-family: 'lexend', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    color: var(--creamy);
+    background-color: var(--space);
+}
