@@ -1,6 +1,6 @@
 var timeInSecs = 0
 function updateTime() {
-    return `It's been ${timeInSecs} ${timeInSecs != 1 ? 'seconds' : 'second'} since you pasted an image.` // This is a ternary operator. It's a shorthand for an if statement. If timeInSecs is not equal to 1, then it will return 'seconds', otherwise it will return 'second'. This constructs a sentence that is used to display the time since the last image was pasted.
+    return `It's been ${timeInSecs} ${timeInSecs != 1 ? 'seconds' : 'second'} since you pasted an image.` // If timeInSecs is not equal to 1, then it will return 'seconds', otherwise it will return 'second'. This constructs a sentence that is used to display the time since the last image was pasted.
 }
 
 setInterval(() => { // every second, add a second to the time
