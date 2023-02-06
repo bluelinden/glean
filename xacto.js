@@ -2,6 +2,7 @@ var timeInSecs = 0
 function updateTime() {
     return `It's been ${timeInSecs} ${timeInSecs != 1 ? 'seconds' : 'second'} since you pasted an image.`
 }
+
 setInterval(() => {
     timeInSecs++;
     document.getElementById('time').innerHTML = updateTime();
