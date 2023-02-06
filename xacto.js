@@ -13,13 +13,14 @@ addEventListener('paste', (event) => {
     var image = paste.getData('text/html'); // get the image and other html from the clipboard data
     var isSlidesPaste = (paste.getData('application/x-vnd.google-docs-drawings-object+wrapped')) ? true : false // check if the image is a Google Slides image by checking if the application/x-vnd.google-docs-drawings-object+wrapped mime type is present. if it is, then it's a Google Slides image. if it's not, then it's not a Google Slides image.
     var isDocsPaste = ((paste.getData('application/x-vnd.google-docs-image-clip+wrapped')) && paste.getData('text/html')) ? true : false; // check if the image is a Google Docs image by checking if the application/x-vnd.google-docs-image-clip+wrapped mime type is present. if it is, then it's a Google Docs image. if it's not, then it's not a Google Docs image.
-    if (!isDocsPaste) { // if it's not a Google Docs image, then alert the user and return
-        window.alert('This is not a Google Docs image. Please paste a Google Docs image.');
-        return; g
+    if (!isDocsPaste && !isSlidesPaste) { // if it's not a Google Docs image, then alert the user and return
+        window.alert('This is not a Google Docs or Slides image. Please paste a Google Docs or Slides image.');
+        return; // return so that the rest of the code doesn't run
     } else {
         timeInSecs = 0; // if it is a Google Docs image, then reset the time to 0 because we just pasted an image
         document.getElementById('time').innerHTML = updateTime(); // update the time in the HTML instantly instead of waiting for the next second to pass
     }
+    
     const parser = new DOMParser(); // create a new DOMParser that we can use to parse the HTML
     var imageHTML = parser.parseFromString(image, 'text/html'); // parse the HTML
     var img = imageHTML.getElementsByTagName('img')[0]; // get the first image tag from the HTML, because that's the image we want
