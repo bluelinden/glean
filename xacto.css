@@ -6,7 +6,14 @@ h1, h2 {
 }
 
 .pageheader {
-    margin-top: 70px;
+    margin-top: 20px;
+}
+
+#logo {
+    position: relative;
+    margin-top: 30px;
+    width: 70px;
+    left: calc(50% - 35px);
 }
 
 div {

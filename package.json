@@ -1,0 +1,23 @@
+{
+  "name": "glean",
+  "version": "1.0.0",
+  "description": "A simple HTML interface to download images from Google Docs.",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bluelinden/glean.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bluelinden/glean/issues"
+  },
+  "homepage": "https://github.com/bluelinden/glean#readme",
+  "devDependencies": {
+    "eslint": "^8.33.0",
+    "eslint-config-google": "^0.14.0"
+  }
+}
